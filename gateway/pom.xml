@@ -8,5 +8,13 @@
     </parent>
     <artifactId>gateway</artifactId>
     <name>Archetype - gateway</name>
-    <url>http://maven.apache.org</url>
+
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
 </project>

@@ -8,6 +8,7 @@
   <packaging>pom</packaging>
   <name>Archetype - SpringCloudProject</name>
   <url>http://maven.apache.org</url>
+
   <modules>
     <module>gateway</module>
     <module>common</module>
@@ -23,12 +24,24 @@
   </parent>
 
 
+
+  <!---
+  Management是父项目进行统一的依赖版本，
+  这些依赖不会马上被maven下载，只有在子项目中依赖到的时候才会进行下载
+  -->
   <dependencyManagement>
     <dependencies>
-<!--      <dependency>-->
-<!--        <groupId></groupId>-->
-<!--        <artifactId></artifactId>-->
-<!--      </dependency>-->
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        <version>unknown</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-gateway</artifactId>
+      </dependency>
+
     </dependencies>
   </dependencyManagement>
 
