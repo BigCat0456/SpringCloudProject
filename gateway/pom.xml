@@ -8,13 +8,22 @@
     </parent>
     <artifactId>gateway</artifactId>
     <name>Archetype - gateway</name>
+    <description>这是网关模块，整个微服务系统的路口，负责完成认证/鉴权/黑白名单...功能</description>
 
-<dependencyManagement>
+<!--<dependencyManagement>-->
+<!--    <dependencies>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-gateway</artifactId>-->
+<!--        </dependency>-->
+<!--    </dependencies>-->
+<!--</dependencyManagement>-->
+
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
-</dependencyManagement>
+
 </project>

@@ -13,6 +13,9 @@
     <module>gateway</module>
     <module>common</module>
     <module>mgrsite</module>
+    <module>website</module>
+    <module>api</module>
+    <module>modules</module>
   </modules>
 
 
