@@ -4,7 +4,6 @@ server:
 spring:
   application:
     name: vv-project-gateway
-
   cloud:
     nacos:
       discovery:
@@ -12,19 +11,14 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true # 让gateway可以发现nacos
+          enabled: true
       routes:
         - id: user_route
           uri: lb://user-server
+          predicates:
+            - Path=/product-serv/**
+#          filters:
+#            - StripPrefix=1
 
 
-#  spring.application.name：
-#
-#  该属性用于指定应用程序的名称。在 Spring Cloud 中，服务注册和发现等功能通常使用这个名称。在这个例子中，应用程序名称被设置为 vv-project-gateway。
-#  spring.cloud.nacos.discovery.server-addr：
-#
-#  这是 Spring Cloud 中与 Nacos 集成的配置。
-#  spring.cloud 是 Spring Cloud 的配置前缀，表示这是 Spring Cloud 的配置项。
-#  nacos 表示使用 Nacos 作为服务注册和发现的组件。
-#  discovery 表示服务发现的相关配置。
-#  server-addr 指定了 Nacos 服务的地址，即 Nacos 服务器的地址和端口。在这个例子中，Nacos 服务器的地址是 localhost:8848。
+
