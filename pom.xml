@@ -34,10 +34,24 @@
   -->
   <dependencyManagement>
     <dependencies>
+
+        <!--自己的依赖-->
+        <dependency>
+            <groupId>com.springcloud</groupId>
+            <artifactId>common-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 <!--      <dependency>-->
 <!--        <groupId>com.alibaba.cloud</groupId>-->
 <!--        <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
 <!--      </dependency>-->
+
+      <dependency>
+        <groupId>com.baomidou</groupId>
+        <artifactId>mybatis-plus-boot-starter</artifactId>
+        <version>3.4.3</version> <!-- 请根据实际情况选择最新版本 -->
+      </dependency>
+
 
       <dependency>
         <groupId>org.springframework.cloud</groupId>
@@ -60,8 +74,18 @@
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies</artifactId>
-
         <scope>import</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>com.baomidou</groupId>
+        <artifactId>mybatis-plus-boot-starter</artifactId>
+        <version>3.4.3</version> <!-- 请根据实际情况选择最新版本 -->
+        <scope>provided</scope>
+        <!--scope
+           provided 使该依赖只在编译时期和测试时期生效
+           阻止依赖传递性
+        -->
       </dependency>
 
     </dependencies>
